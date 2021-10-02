@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('gradient_boosting_regressor_model.pkl', 'rb'))
+model = pickle.load(open('xgboost_model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
 @app.route('/',methods=['GET'])
 
